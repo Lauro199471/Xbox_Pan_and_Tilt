@@ -1,39 +1,39 @@
-// Channel0: GPIO 18 , 12
-// Channel1: GPIO 13 , 19
+/*
+ *  Base Servo(S0) : GPIO 18
+ *
+ *
+*/
 
 #include<ros/ros.h>   // Include ROS Library
 #include <wiringPi.h> // Include wiringPi Library
 #include <iostream>
-#include <softPwm.h>
 #include <std_msgs/UInt16.h>
+
+#define S0_GPIO 18
 
 using namespace std;
 
-int pos = 150;
+int pos = 0;
 double eq_pos = 0;
+
 void myCallback(const std_msgs::UInt16& message_holder)
 {
-  cout << "I heard: " << message_holder.data << endl;
   pos = message_holder.data;
 }
 
 int main(int argc, char **argv)
 {
-  cout << "Raspberry Pi wiringPi test program\n";
+  cout << "Servo 0 Node\n";
 
-
-
-
-  ros::init(argc,argv,"minimal_pwm"); //name this node
+  ros::init(argc,argv,"xbox_to_pwm_S0"); //name this node
   // when this compiled code is run, ROS will recognize it as a node called "minimal_wiringPi"
 
   ros::NodeHandle n; // need this to establish communications with our new node
-  ros::Subscriber my_subscriber_object= n.subscribe("Servo_POS",1,myCallback);
+  ros::Subscriber my_subscriber_object= n.subscribe("Servo_POS_S0",1,myCallback);
 
   wiringPiSetupGpio(); // Initalize Pi
 
-  pinMode (12, PWM_OUTPUT);
-  pinMode (18, PWM_OUTPUT);
+  pinMode (S0_GPIO, PWM_OUTPUT);
 
   pwmSetMode (PWM_MODE_MS);
 
@@ -42,28 +42,17 @@ int main(int argc, char **argv)
    pwmSetRange (2000);
    pwmSetClock (192);
 
+   ros::Rate r(30); // 30 hz for spin
 
-  pwmWrite(12,pos); // 1.5 ms (0 degrees) 150 * .01ms = 1.5ms
-  pwmWrite(18,pos);
-
-  delay(2000);
-  pwmWrite(12,250); // 2.0 ms (90 degrees)
-  pwmWrite(18,250);
-
-  ros::Rate r(10); // 10 hz
    while(ros::ok())
    {
      eq_pos = (0.963*pos) + 74.9;
-     pwmWrite(12,eq_pos);
-     pwmWrite(18,eq_pos);
+     pwmWrite(S0_GPIO,eq_pos);
      ros::spinOnce();
      r.sleep();
    }
-
-  pwmWrite(12,0); // 0 * .01ms = 0ms
-  pwmWrite(18,0);
-
-  return 0;
+   pwmWrite(S0_GPIO,0);
+   return 0;
 }
 
 
