@@ -39,8 +39,8 @@ int main(int argc, char **argv)
 
   // pwmFrequency in Hz = (19.2e6 Hz / pwmClock) / pwmRange.
   // 50Hz ---> 20ms per cycle. 20ms / 2000 units = 0.01ms per unit
-   pwmSetRange (2000);
-   pwmSetClock (192);
+   pwmSetRange(2000);
+   pwmSetClock(192);
 
    ros::Rate r(30); // 30 hz for spin
 
