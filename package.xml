@@ -2,9 +2,9 @@
 <package>
   <name>Xbox_Pan_and_Tilt</name>
   <version>0.0.0</version>
-  <description>The minimal_nodes package</description>
+  <description>The xbox pan and tilt package</description>
 
-  <maintainer email="wyatt@todo.todo">wyatt</maintainer>
+  <maintainer email="Lauro199471@gmail.com">Lauro</maintainer>
 
   <license>TODO</license>
 
