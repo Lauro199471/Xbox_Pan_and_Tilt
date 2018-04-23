@@ -1,5 +1,5 @@
 /*
- *  Base Servo(S1) : GPIO 12
+ *  Base Servo(S1) : GPIO 13
  *
  *
 */
@@ -9,7 +9,7 @@
 #include <iostream>
 #include <std_msgs/UInt16.h>
 
-#define S1_GPIO 12
+#define S1_GPIO 13
 
 using namespace std;
 
@@ -23,7 +23,7 @@ void myCallback(const std_msgs::UInt16& message_holder)
 
 int main(int argc, char **argv)
 {
-  cout << "Servo 0 Node\n";
+  cout << "Servo 1 Node\n";
 
   ros::init(argc,argv,"xbox_to_pwm_S0"); //name this node
   // when this compiled code is run, ROS will recognize it as a node called "minimal_wiringPi"
