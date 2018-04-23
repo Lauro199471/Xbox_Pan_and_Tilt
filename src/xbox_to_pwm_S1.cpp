@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 {
   cout << "Servo 1 Node\n";
 
-  ros::init(argc,argv,"xbox_to_pwm_S0"); //name this node
+  ros::init(argc,argv,"xbox_to_pwm_S1"); //name this node
   // when this compiled code is run, ROS will recognize it as a node called "minimal_wiringPi"
 
   ros::NodeHandle n; // need this to establish communications with our new node
