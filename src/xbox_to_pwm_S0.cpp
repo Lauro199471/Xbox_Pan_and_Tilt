@@ -42,7 +42,7 @@ int main(int argc, char **argv)
    pwmSetRange (2000);
    pwmSetClock (192);
 
-   ros::Rate r(2); // 2 hz for spin
+   ros::Rate r(30); // 2 hz for spin
 
    while(ros::ok())
    {
