@@ -1,0 +1,4 @@
+<launch> 
+    <node name= "joy_node" pkg= "joy" type= "joy_node" />
+    <node name= "xbox_publisher" pkg= "Xbox_Pan_and_Tilt" type= "xbox_publisher" />
+</launch> 

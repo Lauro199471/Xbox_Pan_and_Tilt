@@ -5,6 +5,7 @@ project(Xbox_Pan_and_Tilt)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+  cmake_modules
   roscpp
   std_msgs
 )
@@ -12,7 +13,13 @@ find_package(catkin REQUIRED COMPONENTS
 find_package(Boost REQUIRED COMPONENTS system)
 FIND_LIBRARY(WIRINGPI_LIBRARY wiringPi /opt/wiringPi)
 
-
+catkin_package(
+#  INCLUDE_DIRS include
+#  LIBRARIES seven_dof_arm_test
+#  CATKIN_DEPENDS cmake_modules interactive_markers moveit_core moveit_ros_perception moveit_ros_planning_interface pluginlib roscpp std_msgs
+#  DEPENDS system_lib
+  CATKIN_DEPENDS message_runtime
+)
 
 ###########
 ## Build ##
