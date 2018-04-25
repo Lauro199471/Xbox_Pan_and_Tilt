@@ -44,18 +44,27 @@ int main(int argc, char **argv)
 
   wiringPiSetupGpio(); // Initalize Pi
 
-  pinMode (A_GPIO, OUTPUT);
+  pinMode(A_GPIO, OUTPUT);
+  pinMode(B_GPIO, OUTPUT);
+  pinMode(Y_GPIO, OUTPUT);
+  pinMode(X_GPIO, OUTPUT);
 
   ros::Rate r(30); // 2 hz for spin
 
   while(ros::ok())
   {
     digitalWrite(A_GPIO , a_button);
+    digitalWrite(B_GPIO , b_button);
+    digitalWrite(Y_GPIO , y_button);
+    digitalWrite(X_GPIO , x_button);
     ros::spinOnce();
     r.sleep();
   }
 
   digitalWrite(A_GPIO , OFF);
+  digitalWrite(B_GPIO , OFF);
+  digitalWrite(Y_GPIO , OFF);
+  digitalWrite(X_GPIO , OFF);
 
   return 0;
 }
