@@ -1,4 +1,5 @@
 <launch> 
     <node name= "xbox_to_pwm_S0" pkg= "Xbox_Pan_and_Tilt" type= "xbox_to_pwm_S0" />
     <node name= "xbox_to_pwm_S1" pkg= "Xbox_Pan_and_Tilt" type= "xbox_to_pwm_S1" />
+    <node name= "xbox_button_led" pkg= "Xbox_Pan_and_Tilt" type= "xbox_button_led" />
 </launch> 
