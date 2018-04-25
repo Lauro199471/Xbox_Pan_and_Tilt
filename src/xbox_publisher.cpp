@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
     ros::Subscriber my_subscriber_object= n.subscribe("joy",1,myCallback);
 
 
-    ros::Rate r(100); // 100 hz for spin
+    ros::Rate r(1000); // 1000 khz for spin (Industy Standard)
     while (ros::ok()) 
     {
       std_msgs::UInt16 msgS0;

@@ -49,7 +49,7 @@ int main(int argc, char **argv)
   pinMode(Y_GPIO, OUTPUT);
   pinMode(X_GPIO, OUTPUT);
 
-  ros::Rate r(30); // 2 hz for spin
+  ros::Rate r(1000); // 1 khz for spin (Industry Standard)
 
   while(ros::ok())
   {
