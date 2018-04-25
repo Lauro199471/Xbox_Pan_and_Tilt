@@ -1,0 +1,130 @@
+{
+  "keys": {},
+  "groups": {
+    "pluginmanager": {
+      "keys": {
+        "running-plugins": {
+          "type": "repr",
+          "repr": "{u'rqt_publisher/Publisher': [1]}"
+        }
+      },
+      "groups": {
+        "plugin__rqt_publisher__Publisher__1": {
+          "keys": {},
+          "groups": {
+            "dock_widget__PublisherWidget": {
+              "keys": {
+                "dockable": {
+                  "type": "repr",
+                  "repr": "True"
+                },
+                "parent": {
+                  "type": "repr",
+                  "repr": "None"
+                },
+                "dock_widget_title": {
+                  "type": "repr",
+                  "repr": "u'Message Publisher'"
+                }
+              },
+              "groups": {}
+            },
+            "plugin": {
+              "keys": {
+                "publishers": {
+                  "type": "repr",
+                  "repr": "u\"[{'topic_name': '/Servo_POS_S0', 'type_name': 'std_msgs/UInt16', 'enabled': False, 'rate': 50.0, 'expressions': {u'/Servo_POS_S0/data': '0'}, 'publisher_id': 0, 'counter': 0}, {'topic_name': '/Servo_POS_S1', 'type_name': 'std_msgs/UInt16', 'enabled': False, 'rate': 50.0, 'expressions': {u'/Servo_POS_S1/data': '0'}, 'publisher_id': 1, 'counter': 0}]\""
+                }
+              },
+              "groups": {}
+            }
+          }
+        },
+        "plugin__rqt_image_view__ImageView__1": {
+          "keys": {},
+          "groups": {
+            "dock_widget__ImageViewWidget": {
+              "keys": {
+                "dockable": {
+                  "type": "repr",
+                  "repr": "u'true'"
+                },
+                "parent": {
+                  "type": "repr",
+                  "repr": "None"
+                },
+                "dock_widget_title": {
+                  "type": "repr",
+                  "repr": "u'Image View'"
+                }
+              },
+              "groups": {}
+            },
+            "plugin": {
+              "keys": {
+                "max_range": {
+                  "type": "repr",
+                  "repr": "u'10'"
+                },
+                "mouse_pub_topic": {
+                  "type": "repr",
+                  "repr": "u'/usb_cam/image_raw_mouse_left'"
+                },
+                "num_gridlines": {
+                  "type": "repr",
+                  "repr": "u'1'"
+                },
+                "toolbar_hidden": {
+                  "type": "repr",
+                  "repr": "u'false'"
+                },
+                "zoom1": {
+                  "type": "repr",
+                  "repr": "u'false'"
+                },
+                "dynamic_range": {
+                  "type": "repr",
+                  "repr": "u'false'"
+                },
+                "topic": {
+                  "type": "repr",
+                  "repr": "u'/usb_cam/image_raw'"
+                },
+                "publish_click_location": {
+                  "type": "repr",
+                  "repr": "u'false'"
+                }
+              },
+              "groups": {}
+            }
+          }
+        }
+      }
+    },
+    "mainwindow": {
+      "keys": {
+        "geometry": {
+          "type": "repr(QByteArray.hex)",
+          "repr(QByteArray.hex)": "QtCore.QByteArray('01d9d0cb000200000000051a000002d40000077e000004050000051a000002f00000077e0000040500000000000000000780')",
+          "pretty-print": "         ~       ~       "
+        },
+        "state": {
+          "type": "repr(QByteArray.hex)",
+          "repr(QByteArray.hex)": "QtCore.QByteArray('000000ff00000000fd00000001000000030000026500000100fc0100000002fb00000058007200710074005f007000750062006c00690073006800650072005f005f005000750062006c00690073006800650072005f005f0031005f005f005000750062006c006900730068006500720057006900640067006500740100000000000002650000026500fffffffb0000005a007200710074005f0069006d006100670065005f0076006900650077005f005f0049006d0061006700650056006900650077005f005f0031005f005f0049006d006100670065005600690065007700570069006400670065007403000000e9000000a30000039d000001a1000002650000000000000004000000040000000800000008fc00000001000000030000000100000036004d0069006e0069006d0069007a006500640044006f0063006b00570069006400670065007400730054006f006f006c0062006100720000000000ffffffff0000000000000000')",
+          "pretty-print": "                 Xrqt_publisher__Publisher__1__PublisherWidget          Zrqt_image_view__ImageView__1__ImageViewWidget                            6MinimizedDockWidgetsToolbar        "
+        }
+      },
+      "groups": {
+        "toolbar_areas": {
+          "keys": {
+            "MinimizedDockWidgetsToolbar": {
+              "type": "repr",
+              "repr": "8"
+            }
+          },
+          "groups": {}
+        }
+      }
+    }
+  }
+}
